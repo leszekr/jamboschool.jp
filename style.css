@@ -1,0 +1,63 @@
+body{
+	font: 16px Helvetica, Verdana, Arial;
+	background: black url(leaf.jpg) top left no-repeat;
+}
+h1{
+	margin-top: 0;
+	color: #F40;
+	font-family: 'Acme', cursive;
+	font-size: 50px;
+	font-weight: normal;
+}
+#messagebox{
+	width: 350px;
+	margin: 50px 70px;
+	color: white;
+	padding: 10px;
+	line-height: 150%;
+}
+label{
+	display: block;
+	width: 150px;
+	text-align: right;
+	float: left;
+	margin-right: 5px;
+}
+#mc_embed_signup{
+	margin-top: 10px;
+}
+input{
+	width: 180px;
+	border: none;
+	height: 25px;
+	background: none;
+	color: black;
+	font: 14px helvetica,Verdana,Arial;
+}
+.mc-field-group{
+	margin: 5px 0;
+	line-height: 25px;
+	border: 1px solid black;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px; /* future proofing */
+	background-color: white;
+	text-transform: all-caps;
+	color: #444;
+}
+.button{
+	clear: both;
+	float: right;
+	width: 100px;
+	height: 30px;
+	color: white;
+	background-color: #a40;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px; /* future proofing */
+	border: 1px solid white;
+	cursor: pointer;
+}
+.clear{
+	clear: both;
+}
