@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<link href='style/jamboschool.css' rel='stylesheet' type='text/css'>
+	<title>ジャンボ学校</title>
+</head>
+<body class="home-page">
+	<div id="clouds">
+	<header>
+		<div class="container">
+			<div id="logo">JAMBO School</div>
+			<nav>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about">About school</a></li>
+					<li><a href="/classes">Classes &amp; Payments</a></li>
+					<li><a href="/fun">Fun with English</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="container">
+    <%= yield %>
+
+	</div>
+	<div id="footer">
+		<div class="content">
+		<div class="container">
+			<div class="left column">
+				<p>Copyright &copy; 2012 JAMBO English School. All Rights Reserved.</p>
+			</div>
+			<div class="right column">
+				<p>Contact: David Howenstein,   phone 080-6546-7688   email: <a href="mailto:david@jamboschool.jp">david@jamboschool.jp</a> </p>
+			</div>
+			<br class="clear">
+		</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
