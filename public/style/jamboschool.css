@@ -5,6 +5,9 @@
 	date: 22.08.2012;
 */
 
+@import url("/style/titilliumtext/stylesheet.css");
+
+
 body{
 	margin: 0;
 	padding: 0;
@@ -12,7 +15,7 @@ body{
 	font-family: helvetica, arial, sans;
 	font-size: 13px;
 	color: #00787f;
-	padding-bottom: 100px;
+	padding-bottom: 40px;
 }
 
 
@@ -63,6 +66,7 @@ nav ul{
 	margin: 0;
 	padding: 0;
 	-webkit-margin-before: 0;
+	font-family: 'TitilliumText22L';
 }
 
 nav ul li{
@@ -134,8 +138,8 @@ br.clear{
 }
 
 h1, h2, h3{
+	font-family: 'TitilliumText22LThin';
 	font-weight: normal;
-	font-variant: narrow;
 	margin-top: 1.5em;
 }
 
@@ -232,10 +236,9 @@ input[type=submit]{
 	width: 100%;
 	background: url(../img/footer.png) top center repeat-x;
 	padding-top: 14px;
-	line-height: 22px;
 	padding-bottom: 3px;
 	position: fixed;
-	bottom: 0px;
+	bottom: -5px;
 }
 
 #footer .left.column{
