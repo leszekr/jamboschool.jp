@@ -165,7 +165,6 @@ h1, h2, h3{
 }
 
 .left.column p{
-	margin-left: 23px;
 }
 
 .left.column .note{
@@ -243,7 +242,6 @@ input[type=submit]{
 }
 
 #footer .left p{
-	margin-left: 23px;
 }
 
 #footer .right p{
