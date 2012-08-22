@@ -1,2 +1,2 @@
-require './hikr'
+require './app'
 run Sinatra::Application
