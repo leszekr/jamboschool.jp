@@ -5,23 +5,23 @@
 	<link href='style/jamboschool.css' rel='stylesheet' type='text/css'>
 	<title>ジャンボ学校</title>
 </head>
-<body class="home-page">
+<body class="<%= @body_class %>">
 	<div id="clouds">
 	<header>
 		<div class="container">
 			<div id="logo">JAMBO School</div>
 			<nav>
 				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="/about">About school</a></li>
-					<li><a href="/classes">Classes &amp; Payments</a></li>
-					<li><a href="/fun">Fun with English</a></li>
-					<li><a href="/contact">Contact</a></li>
+					<li class="<%= @m[:home] %>"><a href="/">Home</a></li>
+					<li class="<%= @m[:about] %>"><a href="/about">About school</a></li>
+					<li class="<%= @m[:classes] %>"><a href="/classes">Classes &amp; Payments</a></li>
+					<li class="<%= @m[:fun] %>"><a href="/fun">Fun with English</a></li>
+					<li class="<%= @m[:contact] %>"><a href="/contact">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
-	<div class="container">
+	<div class="container main" >
     <%= yield %>
 
 	</div>

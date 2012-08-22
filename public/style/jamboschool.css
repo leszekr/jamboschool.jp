@@ -10,8 +10,14 @@ body{
 	padding: 0;
 	background: #7be9f0 url(../img/background.png) top center repeat-x;
 	font-family: helvetica, arial, sans;
-	font-size: 17px;
+	font-size: 13px;
 	color: #00787f;
+	padding-bottom: 100px;
+}
+
+
+.home-page{
+	font-size: 17px;
 }
 
 a{
@@ -41,8 +47,8 @@ header{
 	line-height: 220px;
 	overflow: hidden;
 	position: absolute;
-	left: 46px;
-	background: url(../img/jambo-school-logo.png) center center no-repeat;
+	left: 0px;
+	background: url(../img/jambo-school-logo.png) bottom left no-repeat;
 }
 
 nav{
@@ -72,9 +78,15 @@ nav ul li a{
 	padding: 0 1.5em;
 	line-height: 190px;
 	color: #0c979f;
+	border-bottom: 2px solid transparent;
 }
 
-nav ul li a:hover, nav ul li a.active{
+nav ul li a:hover{
+	color: #2cb7bf;
+	border-bottom: 3px solid white;
+}
+
+nav ul li.active a{
 	background: url(../img/menu-highlight.png) top center repeat-x;
 }
 
@@ -97,7 +109,6 @@ nav ul li a:hover, nav ul li a.active{
 
 .left.column{
 	margin-left:23px;
-	text-align: right;
 }
 
 .left.column img{
@@ -125,7 +136,7 @@ br.clear{
 h1, h2, h3{
 	font-weight: normal;
 	font-variant: narrow;
-	margin: 0;
+	margin-top: 1.5em;
 }
 
 .home-page h1{
@@ -157,6 +168,9 @@ h1, h2, h3{
 	margin-left: 46px;
 }
 
+.note h1, .note h2, .note h3, .note h4{
+	margin-top: 0;
+}
 
 .note .content{
 	padding: 15px 19px;
@@ -200,15 +214,20 @@ input[type=submit]{
 	border-radius: 10px;
 }
 
+.center{
+	marign: 0 auto;
+}
 
 #footer{
 	font-size: 12px;
 	clear: both;
 	width: 100%;
 	background: url(../img/footer.png) top center repeat-x;
-	padding-top: 21px;
-	line-height: 32px;
+	padding-top: 14px;
+	line-height: 22px;
 	padding-bottom: 3px;
+	position: fixed;
+	bottom: 0px;
 }
 
 #footer .left.column{
@@ -220,11 +239,11 @@ input[type=submit]{
 }
 
 #footer .left p{
-	margin-left: 46px;
+	margin-left: 23px;
 }
 
 #footer .right p{
-	margin-right: 46px;
+	margin-right: 23px;
 }
 
 #footer .content{
