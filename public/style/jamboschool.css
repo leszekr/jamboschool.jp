@@ -217,8 +217,13 @@ input[type=submit]{
 	border-radius: 10px;
 }
 
+.article {
+	margin-left: 23px;
+	width: 800px;
+}
+
 .center{
-	marign: 0 auto;
+	margin: 0 auto;
 }
 
 #footer{
