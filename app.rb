@@ -17,7 +17,6 @@ before do
 		:fun => "",
 		:contact => ""
 	}
-	p params
 end
 
 get '/' do
