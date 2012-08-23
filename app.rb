@@ -54,12 +54,12 @@ post '/contact/?' do
 	@contact_message = params['contact_message']||""
 
   	if @contact_email =~ /^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$/
-  		mail = Mail.new(
+  		mail = Mail.new({
 	  		:from => 'page_form@jamboschool.jp',
 			:to  => 'leszek@rybicki.cc',
 			:subject  => 'Message from #{params[:contact_name]||"someone"} in the Jambo School page',
 			:body   =>  'David:\r\n\r\n #{params[:contact_name]||"someone")} (#{params[:contact_email]||""} writes:\r\n#{params[:contact_message]}'
-		)
+		})
 		mail.delivery_method :sendmail
 		mail.deliver
 		@error = "";
