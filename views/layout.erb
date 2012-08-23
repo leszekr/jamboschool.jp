@@ -7,10 +7,10 @@
 </head>
 <body class="<%= @body_class %>">
 	<div id="clouds">
-	<header>
+	<div id="header">
 		<div class="container">
 			<div id="logo">JAMBO School</div>
-			<nav>
+			<div id="nav">
 				<ul>
 					<li class="<%= @m[:home] %>"><a href="/">Home</a></li>
 					<li class="<%= @m[:about] %>"><a href="/about">About school</a></li>
@@ -18,9 +18,9 @@
 					<li class="<%= @m[:fun] %>"><a href="/fun">Fun with English</a></li>
 					<li class="<%= @m[:contact] %>"><a href="/contact">Contact</a></li>
 				</ul>
-			</nav>
+			</div>
 		</div>
-	</header>
+	</div>
 	<div class="container main" >
     <%= yield %>
 			<br class="clear">
