@@ -13,11 +13,14 @@ body{
 	padding: 0;
 	background: #7be9f0 url(../img/background.png) top center repeat-x;
 	font-family: helvetica, arial, sans;
-	font-size: 13px;
+	font-size: 14px;
 	color: #00787f;
 	padding-bottom: 40px;
 }
 
+p{
+	line-height: 1.5em;
+}
 
 .home-page{
 	font-size: 17px;

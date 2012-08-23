@@ -7,7 +7,7 @@
 	美容室の MESSA Raffinato の隣
 </p>
 
-<p style="line-height: 1.5em; font-size: 16px">メール: <a href="mailto:david@jamboschool.jp">david@jamboschool.jp</a> <br>
+<p style="line-height: 1.5em; font-size: 16px">メール: <a href="mailto:david@jamboschool.jp">david@jamboschool.jp</a>	 <br>
 電話: 080-6546-7688</p><br>
 
 <h2>アクセス</h2>
@@ -38,13 +38,13 @@
 				</div>
 				<% end %>
 
-				<div class="formrow"><label for="contact_email">Your e-mail: &nbsp;</label><input type="email" value="<%= @contact_email %>" name="contact_email"></div>
+				<div class="formrow"><label for="contact_email">メールアドレス: &nbsp;</label><input type="email" value="<%= @contact_email %>" name="contact_email"></div>
 
-				<div class="formrow"><label for="contact_name">Your name: &nbsp;</label><input type="text" value="<%= @contact_name %>" name="contact_name"></div>
+				<div class="formrow"><label for="contact_name">名前: &nbsp;</label><input type="text" value="<%= @contact_name %>" name="contact_name"></div>
 
-				<div class="formrow"><label for="contact_phone">Your phone: &nbsp;</label><input type="text" value="<%= @contact_phone %>" name="contact_phone"></div>
+				<div class="formrow"><label for="contact_phone">電話番号: &nbsp;</label><input type="text" value="<%= @contact_phone %>" name="contact_phone"></div>
 		
-				<div class="formrow"><label for="message">Message: &nbsp;</label><textarea name="contact_message"><%= @contact_message %></textarea></div>
+				<div class="formrow"><label for="message">メッセージ: &nbsp;</label><textarea name="contact_message"><%= @contact_message %></textarea></div>
 		
 				<input type="submit" value="送れる" name="send" class="button">
 
