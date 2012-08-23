@@ -37,6 +37,10 @@ a{
 	text-align: right;
 }
 
+.align-center{
+	text-align: center;
+}
+
 #clouds{
 	background: url(../img/clouds.png) top center no-repeat;
 	min-height: 600px;
@@ -58,7 +62,7 @@ a{
 	position: absolute;
 	right: 46px;
 	top: 0;
-	font-size: 15px;
+	font-size: 16px;
 }
 
 #nav ul{
