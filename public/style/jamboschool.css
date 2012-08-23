@@ -66,7 +66,7 @@ a{
 	margin: 0;
 	padding: 0;
 	-webkit-margin-before: 0;
-	font-family: 'TitilliumText22L';
+	font-family: Hiragino, 'TitilliumText22L';
 }
 
 #nav ul li{
@@ -138,7 +138,7 @@ br.clear{
 }
 
 h1, h2, h3{
-	font-family: 'TitilliumText22LThin';
+	font-family: 'TitilliumText22LThin', "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN";
 	font-weight: normal;
 	margin-top: 1.5em;
 }
@@ -175,6 +175,10 @@ h1, h2, h3{
 	margin-left: 46px;
 }
 
+.note{
+	margin-top: 14px;
+}
+
 .note h1, .note h2, .note h3, .note h4{
 	margin-top: 0;
 }
@@ -183,9 +187,13 @@ h1, h2, h3{
 	padding: 15px 19px;
 	background: url(../img/noise.png); 
 	position: relative;
-	min-height: 120px;
 	top: -14px;
 	margin-left: 1px;
+}
+
+.home-page .note .content{
+	min-height: 120px;
+
 }
 
 .mc-field-group{
