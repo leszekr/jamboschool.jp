@@ -17,6 +17,7 @@ before do
 		:fun => "",
 		:contact => ""
 	}
+	p params
 end
 
 get '/' do
@@ -57,8 +58,8 @@ post '/contact/?' do
   		mailspec = {
 	  		:from => 'page_form@jamboschool.jp',
 			:to  => 'leszek@rybicki.cc',
-			:subject  => 'Message from #{params[:contact_name]||"someone"} in the Jambo School page',
-			:body   =>  'David:\r\n\r\n #{params[:contact_name]||"someone")} (#{params[:contact_email]||""} writes:\r\n#{params[:contact_message]}'
+			:subject  => "Message from #{params[:contact_name]||'someone'} in the Jambo School page",
+			:body   =>  "David:\r\n\r\n #{params[:contact_name]||'someone'} (#{params[:contact_email]||''} writes:\r\n#{params[:contact_message]}"
 		}
   		mail = Mail.new(mailspec)
 		mail.delivery_method :sendmail
