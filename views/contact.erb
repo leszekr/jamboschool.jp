@@ -1,0 +1,36 @@
+<div class="left column">
+	&nbsp;
+</div>
+<div class="right column">
+	<br>
+	<div class="note">
+		<div class="content">
+			<% if @thank_you %>
+				<h2>Thank you for your interest in JAMBO School.</h2>
+				While we read all messages, we can't promise to answer all. Please be patient.
+			<% else %>
+			<form method="post">
+				<h2>Feel free to write a message here</h2>
+				
+				<% if @error: %>
+				<div class="form-error">
+					<%= @error %>
+				</div>
+				<% end %>
+
+				<div class="formrow"><label for="contact_email">Your e-mail: &nbsp;</label><input type="email" value="<%= @contact_email %>" name="contact_email"></div>
+
+				<div class="formrow"><label for="contact_name">Your name: &nbsp;</label><input type="text" value="<%= @contact_name %>" name="contact_name"></div>
+
+				<div class="formrow"><label for="contact_phone">Your phone: &nbsp;</label><input type="text" value="<%= @contact_phone %>" name="contact_phone"></div>
+		
+				<div class="formrow"><label for="message">Message: &nbsp;</label><textarea name="contact_message"><%= @contact_message %></textarea></div>
+		
+				<input type="submit" value="送れる" name="send" class="button">
+
+			</form>
+			<% end %>
+			<br class="clear">	
+		</div>
+	</div>
+</div>

@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'rubygems' 
+require 'mail'
 require 'sinatra/r18n'
 
 enable :sessions
@@ -41,7 +42,36 @@ end
 
 get '/contact' do
 	@m[:contact] = "active"
+	@error = ""
 	erb :contact
+end
+
+
+post '/contact/?' do
+	@contact_email = params['contact_email']||""
+	@contact_name = params['contact_name']
+	@contact_phone = params['contact_phone']
+	@contact_message = params['contact_message']||""
+
+  	if @contact_email =~ /^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$/
+  		mail = Mail.new do
+	  		from     'page_form@jamboschool.jp'
+			to       'leszek@rybicki.cc'
+			subject  'Message from '+(@contact_name||"someone")+" in the Jambo School page"
+			body     "David:\r\n\r\n"+(@contact_name||"someone")+"("+(@contact_email||"")+") writes\r\n"+(@contact_message||"")
+		end
+#		mail.delivery_method :sendmail
+		mail.deliver
+		@error = "";
+		@thank_you = true
+		erb :contact
+	else
+		@error = "E-mail is invalid"
+		@m[:contact] = "active"
+		erb :contact
+	end
+
+
 end
 
 not_found do

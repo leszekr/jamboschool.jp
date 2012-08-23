@@ -201,16 +201,25 @@ label{
 	text-align: right;
 }
 
-input[type=text], input[type=email], input[type=password]{
-	width: 180px;
+.formrow{
+	margin-bottom: 5px;
+}
+
+input[type=text], input[type=email], input[type=password], textarea{
+	width: 270px;
 	height: 22px;
 	font-size: 16px;
 	border-radius: 10px;
 	border: none;
 	color: #666;
 	border: 1px solid #ddd;
+	padding: 0 5px;
 }
 
+textarea{
+	height: 230px;
+	padding-top: 5px;
+}
 
 input[type=submit]{
 	width: 100px;
@@ -219,6 +228,8 @@ input[type=submit]{
 	background: #15868d;
 	color: white;
 	border-radius: 10px;
+	margin: 5px;
+	margin-right: 25px;
 }
 
 .article {
