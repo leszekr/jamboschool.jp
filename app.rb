@@ -58,7 +58,7 @@ post '/contact/?' do
 	  		:from => 'Jambo School Page <page_form@jamboschool.jp>',
 			:to  => 'david@jamboschool.jp, webmaster@jamboschool.jp',
 			:subject  => "Message from #{params[:contact_name]||'someone'} in the Jambo School page",
-			:body   =>  "David:\r\n\r\n #{params[:contact_name]||'someone'} (#{params[:contact_email]||''} writes:\r\n\r\n---#{params[:contact_message]}\r\n\r\n---"
+			:body   =>  "David:\r\n\r\n #{params[:contact_name]||'someone'} (#{params[:contact_email]||''} writes:\r\n\r\n---\r\n#{params[:contact_message]}\r\n\r\n---"
 		}
   		mail = Mail.new(mailspec)
 		mail.delivery_method :sendmail
