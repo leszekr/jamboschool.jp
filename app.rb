@@ -56,9 +56,9 @@ post '/contact/?' do
   	if @contact_email =~ /^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$/
   		mailspec = {
 	  		:from => 'Jambo School Page <page_form@jamboschool.jp>',
-			:to  => 'webmaster@jamboschool.jp',
+			:to  => 'david@jamboschool.jp',
 			:subject  => "Message from #{params[:contact_name]||'someone'} in the Jambo School page",
-			:body   =>  "David:\r\n\r\n #{params[:contact_name]||'someone'} (#{params[:contact_email]||''} writes:\r\n#{params[:contact_message]}"
+			:body   =>  "David:\r\n\r\n #{params[:contact_name]||'someone'} (#{params[:contact_email]||''} writes:\r\n\r\n---#{params[:contact_message]}\r\n\r\n---"
 		}
   		mail = Mail.new(mailspec)
 		mail.delivery_method :sendmail
