@@ -73,7 +73,8 @@ a{
 	margin: 0;
 	padding: 0;
 	-webkit-margin-before: 0;
-	font-family: Hiragino, 'TitilliumText22L';
+	font-family: "Hiragino Sans GB", 'TitilliumText22L';
+	font-weight: lighter;
 }
 
 #nav ul li{
@@ -145,14 +146,18 @@ br.clear{
 }
 
 h1, h2, h3{
-	font-family: 'TitilliumText22LThin', "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN";
-	font-weight: normal;
+	font-family: 'TitilliumText22LThin', "Hiragino Sans GB", "Hiragino Kaku Gothic", "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴ ProN", "helvetica", "Arial", sans;
+	font-weight: 100;
 	margin-top: 1.5em;
+}
+
+h2{
+	font-size: 17px;
 }
 
 .home-page h1{
 	text-align: right;
-	font-weight: normal;
+	font-weight: 100;
 	line-height: 1.8em;
 	font-size: 28px;
 	color: #53bdbf;
