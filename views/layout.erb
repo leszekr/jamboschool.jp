@@ -4,7 +4,12 @@
 	<meta charset="utf-8">
 	<meta author="Leszek Rybicki, http://studio.rybicki.cc">
 	<link href='/style/jamboschool.css' rel='stylesheet' type='text/css'>
-	<title>ジャンボ学校</title>
+	<title><%= 
+		unless @subtitle.empty?
+		 @subtitle+" ー "
+		end
+		%><%= @title %>
+		</title>
 </head>
 <body class="<%= @body_class %>">
 	<div id="clouds">

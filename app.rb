@@ -17,6 +17,8 @@ before do
 		:fun => "",
 		:contact => ""
 	}
+	@title = "ジャンボ学校"
+	@subtitle = ""
 end
 
 get '/' do
@@ -27,22 +29,26 @@ end
 
 get '/classes' do
 	@m[:classes] = "active"
+	@subtitle = "クラス"
 	erb :classes
 end
 
 get '/about' do
 	@m[:about] = "active"
+	@subtitle = "ジャンボ学校とは"
 	erb :about
 end
 
 get '/fun' do
 	@m[:fun] = "active"
+	@subtitle = "お楽しみ"
 	erb :fun
 end
 
 get '/contact' do
 	@m[:contact] = "active"
 	@error = ""
+	@subtitle = "連絡先"
 	erb :contact
 end
 
@@ -65,9 +71,11 @@ post '/contact/?' do
 		mail.deliver
 		@error = "";
 		@thank_you = true
+		@subtitle = "ありがとう"
 		erb :contact
 	else
-		@error = "E-mail is invalid"
+		@error = "メールは無効です"
+		@subtitle = "連絡先　ー　エラー"
 		@m[:contact] = "active"
 		erb :contact
 	end
