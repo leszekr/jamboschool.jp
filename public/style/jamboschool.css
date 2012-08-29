@@ -74,7 +74,7 @@ a{
 	padding: 0;
 	-webkit-margin-before: 0;
 	font-family: "Hiragino Sans GB", 'TitilliumText22L';
-	font-weight: lighter;
+	font-weight: bold;
 }
 
 #nav ul li{
@@ -88,7 +88,11 @@ a{
 	text-decoration: none;
 	height: 110px;
 	padding: 0 1.5em;
+	font-weight: bold;
 	line-height: 190px;
+	text-shadow:1px 1px 1px #E0FDFF;
+	-webkit-text-shadow:1px 1px 1px #E0FDFF;
+	-moz-text-shadow:1px 1px 1px #E0FDFF;
 	color: #0c979f;
 	border-bottom: 2px solid transparent;
 }
@@ -96,6 +100,8 @@ a{
 #nav ul li a:hover{
 	color: #2cb7bf;
 	border-bottom: 3px solid white;
+	-webkit-text-shadow:1px 1px 1px #fff;
+	-moz-text-shadow:1px 1px 1px #fff;
 }
 
 #nav ul li.active a{
