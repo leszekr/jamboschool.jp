@@ -16,6 +16,9 @@ body{
 	font-size: 14px;
 	color: #00787f;
 	padding-bottom: 40px;
+	text-shadow:1px 1px 1px #E0FDFF;
+	-webkit-text-shadow:1px 1px 1px #E0FDFF;
+	-moz-text-shadow:1px 1px 1px #E0FDFF;
 }
 
 p{
