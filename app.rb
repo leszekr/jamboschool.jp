@@ -17,7 +17,7 @@ before do
 		:fun => "",
 		:contact => ""
 	}
-	@title = "ジャンボ学校"
+	@title = "ジャンボ英語学校"
 	@subtitle = ""
 end
 
