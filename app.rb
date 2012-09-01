@@ -46,6 +46,7 @@ get '/fun' do
 end
 
 get '/contact' do
+	response.headers["X-Frame-Options"] = "GOFORIT"
 	@m[:contact] = "active"
 	@error = ""
 	@subtitle = "連絡先"
