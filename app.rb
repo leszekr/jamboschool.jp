@@ -18,7 +18,8 @@ before do
 		:contact => ""
 	}
 
-	@title = "ジャンボ学校"
+	@title = "ジャンボスクール"
+	@keywords = "英語学校	"
 	@subtitle = ""
 end
 
