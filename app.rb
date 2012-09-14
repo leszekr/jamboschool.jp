@@ -11,6 +11,7 @@ set :markdown, :layout_engine => :erb, :layout => :layout
 R18n.set("ja")
 R18n::I18n.default = "ja"
 
+session[:locale]
 
 before do
 	@m = {
