@@ -4,10 +4,9 @@ require 'mail'
 require 'sinatra/r18n'
 
 enable :sessions
-R18n.set('en')
 
+session[:locale] = 'jp'
 set :markdown, :layout_engine => :erb, :layout => :layout
-
 
 before do
 	@m = {
@@ -17,11 +16,15 @@ before do
 		:fun => "",
 		:contact => ""
 	}
+   session[:locale] = params[:locale] if params[:locale]
 
-	@title = "ジャンボスクール"
-	@keywords = "英語学校	"
+	@title = t.title
+	@keywords = t.keywords
 	@subtitle = ""
 end
+
+R18n.set(session[:locale])
+R18n::I18n.default = session[:locale]
 
 get '/' do
 	@m[:home] = "active"
@@ -51,7 +54,7 @@ get '/contact' do
 	response.headers["X-Frame-Options"] = "GOFORIT"
 	@m[:contact] = "active"
 	@error = ""
-	@subtitle = "連絡先"
+	@subtitle = t.menu.contact
 	erb :contact
 end
 
