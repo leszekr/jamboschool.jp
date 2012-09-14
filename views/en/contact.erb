@@ -1,0 +1,66 @@
+<style type="text/javascript">
+</style>
+<div class="left column"><h1>Address</h1></div>
+<br class="clear">
+<div class="left column">
+
+<p style="line-height: 1.5em; font-size: 16px">JAMBO English School<br>
+	東京都江東区富岡 1-26-13-203 (Shimada Bld.) <br>
+	美容室の MESSA Raffinato の隣
+</p>
+
+<p style="line-height: 1.5em; font-size: 16px">E-mail: <a href="mailto:david@jamboschool.jp">david@jamboschool.jp</a>	 <br>
+Phone: 080-6546-7688</p><br>
+
+<h2>Access</h2>
+
+	<div class="note"><div class="content" style="padding: 11px 8px">
+		<div id="access_map">
+		</div>
+		<iframe width="440" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?t=m&amp;msa=0&amp;msid=210768222520847954293.0004c89e911bcc9f808ef&amp;ie=UTF8&amp;ll=35.671295,139.797657&amp;spn=0.005508,0.009645&amp;output=embed"></iframe><br /><small>View <a href="https://maps.google.com/maps/ms?t=m&amp;msa=0&amp;msid=210768222520847954293.0004c89e911bcc9f808ef&amp;ie=UTF8&amp;ll=35.671295,139.797657&amp;spn=0.005508,0.009645&amp;source=embed" style="color:#0000FF;text-align:left">this</a> in a larger map</small>
+<!--			<img src="img/map.png" alt="アクセスマップ">--><br class="clear">
+		</div></div>
+<p style="line-height: 1.5em; font-size: 16px">
+	質問や授業についてのご相談がある方は、気軽にジャンボ学校のデイヴィッド・ハウェンスタインにご連絡を。</p>
+	<div class="note"><div class="content" style="padding: 11px 8px">
+			<img src="img/shimada.jpg" width="440" alt="アクセスマップ"><br class="clear">
+		</div></div>
+</div>
+<div class="right column">
+	<br>
+	<div class="note">
+		<div class="content">
+			<% if @thank_you %>
+				<h2>Thank you for your interest in JAMBO School.</h2>
+				<p>While we read all of the messages, we cannot promise to answer them all.</p>
+							<% else %>
+			<form method="post">
+				<h2>Feel Free to Write a Message Here</h2>
+				
+				<% if @error: %>
+				<div class="form-error">
+					<%= @error %>
+				</div>
+				<% end %>
+
+				<div class="formrow"><label for="contact_email">Your e-mail: &nbsp;</label><input type="email" value="<%= @contact_email %>" name="contact_email"></div>
+
+				<div class="formrow"><label for="contact_name">Name: &nbsp;</label><input type="text" value="<%= @contact_name %>" name="contact_name"></div>
+
+				<div class="formrow"><label for="contact_phone">Phone number: &nbsp;</label><input type="text" value="<%= @contact_phone %>" name="contact_phone"></div>
+		
+				<div class="formrow"><label for="message">Message: &nbsp;</label><textarea name="contact_message"><%= @contact_message %></textarea></div>
+		
+				<input type="submit" value="送れる" name="send" class="button">
+
+			</form>
+			<% end %>
+			<br class="clear">	
+		</div>
+	</div>
+</div>
+<br class="clear">
+<div class="left column">
+</div>
+<div class="right column">
+</div>

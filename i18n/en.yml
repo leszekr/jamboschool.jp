@@ -1,0 +1,18 @@
+title: "JAMBO English School"
+keywords: ""
+footer: "Copyright&copy;2012 Jambo English School. All Rights Reserved. Design: "
+contact: "Contact: "
+david: "David Howenstein"
+phone: "Phone: "
+otherlang: ja
+otherlangname: "日本語"
+
+menu:
+ home: Home
+ about: About JAMBO School
+ fun: Fun with English
+ classes: Classes and Payments
+ contact: Contact
+
+home:
+  motto: 室内外で英語を<br>とことん学ぶ

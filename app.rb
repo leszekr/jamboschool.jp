@@ -5,8 +5,12 @@ require 'sinatra/r18n'
 
 enable :sessions
 
-session[:locale] = 'jp'
 set :markdown, :layout_engine => :erb, :layout => :layout
+
+
+R18n.set("ja")
+R18n::I18n.default = "ja"
+
 
 before do
 	@m = {
@@ -16,38 +20,38 @@ before do
 		:fun => "",
 		:contact => ""
 	}
-   session[:locale] = params[:locale] if params[:locale]
+   	session[:locale] = params[:lang] if params[:lang]
+
+   	session[:locale] ||= "ja"
 
 	@title = t.title
 	@keywords = t.keywords
 	@subtitle = ""
 end
 
-R18n.set(session[:locale])
-R18n::I18n.default = session[:locale]
 
 get '/' do
 	@m[:home] = "active"
 	@body_class="home-page"
-	erb :home
+	erb :"/#{session[:locale]}/home"
 end
 
 get '/classes' do
 	@m[:classes] = "active"
-	@subtitle = "クラス"
-	erb :classes
+	@subtitle = t.menu.classes
+	erb :"/#{session[:locale]}/classes"
 end
 
 get '/about' do
 	@m[:about] = "active"
-	@subtitle = "ジャンボ学校とは"
-	erb :about
+	@subtitle = t.menu.about
+	erb :"/#{session[:locale]}/about"
 end
 
 get '/fun' do
 	@m[:fun] = "active"
-	@subtitle = "お楽しみ"
-	erb :fun
+	@subtitle = t.menu.fun
+	markdown :"/#{session[:locale]}/fun"
 end
 
 get '/contact' do
@@ -55,7 +59,7 @@ get '/contact' do
 	@m[:contact] = "active"
 	@error = ""
 	@subtitle = t.menu.contact
-	erb :contact
+	erb :"/#{session[:locale]}/contact"
 end
 
 
