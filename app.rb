@@ -19,7 +19,7 @@ before do
 	}
 
 	@title = "ジャンボスクール"
-	@keywords = "英語学校	"
+	@keywords = "英語学校"
 	@subtitle = ""
 end
 
