@@ -26,10 +26,10 @@ p{
 }
 
 #language_switcher{
+	display: block;
 	width: 71px;
 	height: 30px;
 	background: url(../img/lang.png) top right no-repeat;
-	line-height: 30px;
 	text-align: center;
 	position: absolute;
 	top: 130px;
@@ -39,9 +39,8 @@ p{
 	text-shadow:1px 1px 1px #7be9f0;
 	-webkit-text-shadow:1px 1px 1px #7be9f0;
 	-moz-text-shadow:1px 1px 1px #7be9f0;
-}
-#language_switcher a{
 	text-decoration: none;
+	line-height: 30px;
 	color: white;
 }
 
