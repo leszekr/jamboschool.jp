@@ -84,7 +84,7 @@ a{
 	overflow: hidden;
 	position: absolute;
 	left: 0px;
-	background: url(../img/jambo-school-logo.png) bottom left no-repeat;
+	background: url(../img/jambo-school-logo.png) bottom left;
 }
 
 .column ul li{
