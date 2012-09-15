@@ -13,4 +13,8 @@ menu:
  fun: Fun
  classes: Classes and Payments
  contact: Contact
+ contact_error: Contact - error
 
+message:
+ thankyou: Thank you
+ mail_error: E-mail is not valid

@@ -13,3 +13,8 @@ menu:
  fun: "お楽しみ"
  classes: "クラススケジュールと授業料"
  contact: "連絡先"
+ contact_error: 連絡先 - エラー
+
+message:
+ thankyou: ありがとう
+ mail_error: "メールは無効です"

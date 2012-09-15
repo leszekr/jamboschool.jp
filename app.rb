@@ -80,11 +80,11 @@ post '/contact/?' do
 		mail.deliver
 		@error = "";
 		@thank_you = true
-		@subtitle = "ありがとう"
+		@subtitle = t.message.thankyou
 		erb :contact
 	else
-		@error = "メールは無効です"
-		@subtitle = "連絡先　ー　エラー"
+		@error = t.message.mail_error
+		@subtitle = t.menu.contact_error
 		@m[:contact] = "active"
 		erb :contact
 	end
@@ -93,5 +93,5 @@ post '/contact/?' do
 end
 
 not_found do
-	erb :'404'
+	redirect '/'
 end
