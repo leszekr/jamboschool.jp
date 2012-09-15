@@ -15,7 +15,6 @@ body{
 	font-family: helvetica, arial, sans;
 	font-size: 14px;
 	color: #00787f;
-	width: 1200px;
 	position: relative;
 	padding-bottom: 40px;
 	text-shadow:1px 1px 1px #E0FDFF;
@@ -38,9 +37,9 @@ p{
 	font-size: 12px;
 	right: 0;
 
-	text-shadow:1px 1px 1px #7be9f0;
-	-webkit-text-shadow:1px 1px 1px #7be9f0;
-	-moz-text-shadow:1px 1px 1px #7be9f0;
+	text-shadow:-1px -1px 1px rgba(0,0,0,0.5);
+	-webkit-text-shadow:-1px -1px 1px rgba(0,0,0,0.5);
+	-moz-text-shadow:-1px -1px 1px rgba(0,0,0,0.5);
 	text-decoration: none;
 	line-height: 30px;
 	color: white;
