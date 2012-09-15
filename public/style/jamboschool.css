@@ -6,7 +6,9 @@
 @import url("/style/titilliumtext/stylesheet.css");
 */
 
-
+html{
+	width: 100%;
+}
 
 body{
 	margin: 0;
@@ -15,6 +17,7 @@ body{
 	font-family: helvetica, arial, sans;
 	font-size: 14px;
 	color: #00787f;
+	width: 100%;
 	position: relative;
 	padding-bottom: 40px;
 	text-shadow:1px 1px 1px #E0FDFF;
