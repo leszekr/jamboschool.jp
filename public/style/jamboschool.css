@@ -15,6 +15,8 @@ body{
 	font-family: helvetica, arial, sans;
 	font-size: 14px;
 	color: #00787f;
+	width: 1200px;
+	position: relative;
 	padding-bottom: 40px;
 	text-shadow:1px 1px 1px #E0FDFF;
 	-webkit-text-shadow:1px 1px 1px #E0FDFF;
