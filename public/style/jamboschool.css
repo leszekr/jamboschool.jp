@@ -3,9 +3,9 @@
 	code: Leszek Rybicki
 	design: Jakub Kuik;
 	date: 22.08.2012;
+@import url("/style/titilliumtext/stylesheet.css");
 */
 
-@import url("/style/titilliumtext/stylesheet.css");
 
 
 body{
@@ -99,7 +99,7 @@ a{
 	margin: 0;
 	padding: 0;
 	-webkit-margin-before: 0;
-	font-family: "Hiragino Sans GB", 'TitilliumText22L';
+/*	font-family: "Hiragino Sans GB", 'TitilliumText22L';*/
 	font-weight: bold;
 }
 
