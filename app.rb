@@ -4,10 +4,12 @@ require 'mail'
 require 'sinatra/r18n'
 
 enable :sessions
-R18n.set('en')
 
 set :markdown, :layout_engine => :erb, :layout => :layout
 
+
+R18n.set("ja")
+R18n::I18n.default = "ja"
 
 before do
 	@m = {
@@ -17,42 +19,46 @@ before do
 		:fun => "",
 		:contact => ""
 	}
+   	session[:locale] = params[:lang] if params[:lang]
 
-	@title = "ジャンボスクール"
-	@keywords = "英語学校"
+   	session[:locale] ||= "ja"
+
+	@title = t.title
+	@keywords = t.keywords
 	@subtitle = ""
 end
+
 
 get '/' do
 	@m[:home] = "active"
 	@body_class="home-page"
-	erb :home
+	erb :"/#{session[:locale]}/home"
 end
 
 get '/classes' do
 	@m[:classes] = "active"
-	@subtitle = "クラス"
-	erb :classes
+	@subtitle = t.menu.classes
+	erb :"/#{session[:locale]}/classes"
 end
 
 get '/about' do
 	@m[:about] = "active"
-	@subtitle = "ジャンボ学校とは"
-	erb :about
+	@subtitle = t.menu.about
+	erb :"/#{session[:locale]}/about"
 end
 
 get '/fun' do
 	@m[:fun] = "active"
-	@subtitle = "お楽しみ"
-	erb :fun
+	@subtitle = t.menu.fun
+	markdown :"/#{session[:locale]}/fun"
 end
 
 get '/contact' do
 	response.headers["X-Frame-Options"] = "GOFORIT"
 	@m[:contact] = "active"
 	@error = ""
-	@subtitle = "連絡先"
-	erb :contact
+	@subtitle = t.menu.contact
+	erb :"/#{session[:locale]}/contact"
 end
 
 
@@ -74,11 +80,11 @@ post '/contact/?' do
 		mail.deliver
 		@error = "";
 		@thank_you = true
-		@subtitle = "ありがとう"
+		@subtitle = t.message.thankyou
 		erb :contact
 	else
-		@error = "メールは無効です"
-		@subtitle = "連絡先　ー　エラー"
+		@error = t.message.mail_error
+		@subtitle = t.menu.contact_error
 		@m[:contact] = "active"
 		erb :contact
 	end
@@ -87,5 +93,5 @@ post '/contact/?' do
 end
 
 not_found do
-	erb :'404'
+	redirect '/'
 end

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ja">
+<html lang="<%= session[:locale] %>">
 <head>
 	<meta charset="utf-8">
 	<meta author="Leszek Rybicki, http://studio.rybicki.cc">
@@ -32,11 +32,11 @@
 			<a href="/"><div id="logo">JAMBO School</div></a>
 			<div id="nav">
 				<ul>
-					<li class="<%= @m[:home] %>"><a href="/">ホームページ</a></li>
-					<li class="<%= @m[:about] %>"><a href="/about">ジャンボ学校とは</a></li>
-					<li class="<%= @m[:classes] %>"><a href="/classes">クラススケジュールと授業料</a></li>
-					<!--<li class="<%= @m[:fun] %>"><a href="/fun">お楽しみ</a></li>-->
-					<li class="<%= @m[:contact] %>"><a href="/contact">連絡先</a></li>
+					<li class="<%= @m[:home] %>"><a href="/"><%= t.menu.home %></a></li>
+					<li class="<%= @m[:about] %>"><a href="/about"><%= t.menu.about %></a></li>
+					<li class="<%= @m[:classes] %>"><a href="/classes"><%= t.menu.classes %></a></li>
+					<li class="<%= @m[:fun] %>"><a href="/fun"><%= t.menu.fun %></a></li>
+					<li class="<%= @m[:contact] %>"><a href="/contact"><%= t.menu.contact %></a></li>
 				</ul>
 			</div>
 		</div>
@@ -50,15 +50,16 @@
 		<div class="content">
 		<div class="container">
 			<div class="left column">
-				<p>著作権&copy;2012 ＪＡＭＢＯ英語学校 。無断複写･転載を禁じます。Design: <a target="_blank" href="http://www.behance.net/jkuik">Jakub Kuik</a></p>
+				<p><%= t.footer %><a target="_blank" href="http://www.behance.net/jkuik">Jakub Kuik</a></p>
 			</div>
 			<div class="right column">
-				<p>連絡先：<a href="mailto:david@jamboschool.jp">デイヴィッド・ハウェンスタイン</a>　電話 080-6546-7688</p>
+				<p><%= t.contact %><a href="mailto:david@jamboschool.jp"><%= t.david %></a>　<%= t.phone %>080-6546-7688</p>
 			</div>
 			<br class="clear">
 		</div>
 		</div>
 	</div>
 	</div>
+	<a id="language_switcher" href="?lang=<%=t.otherlang %>"><%= t.otherlangname %></a>
 </body>
 </html>

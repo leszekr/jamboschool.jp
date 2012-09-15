@@ -1,0 +1,20 @@
+title: "JAMBO English School"
+keywords: ""
+footer: "Copyright&copy;2012 Jambo English School. All Rights Reserved. Design: "
+contact: "Contact: "
+david: "David Howenstein"
+phone: "Phone: "
+otherlang: ja
+otherlangname: "日本語"
+
+menu:
+ home: Home
+ about: About the School
+ fun: Fun
+ classes: Classes and Payments
+ contact: Contact
+ contact_error: Contact - error
+
+message:
+ thankyou: Thank you
+ mail_error: E-mail is not valid

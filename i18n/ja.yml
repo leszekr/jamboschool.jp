@@ -1,0 +1,20 @@
+title: "ジャンボスクール"
+keywords: "英語 学校"
+footer: "著作権&copy;2012 ＪＡＭＢＯ英語学校 。無断複写･転載を禁じます。Design: "
+contact: "連絡先："
+david: "デイヴィッド・ハウェンスタイン"
+phone: "電話"
+otherlang: en
+otherlangname: "English"
+
+menu:
+ home: ホームページ
+ about: "ジャンボ学校とは"
+ fun: "お楽しみ"
+ classes: "クラススケジュールと授業料"
+ contact: "連絡先"
+ contact_error: 連絡先 - エラー
+
+message:
+ thankyou: ありがとう
+ mail_error: "メールは無効です"
