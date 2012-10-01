@@ -173,6 +173,11 @@ a{
 	float: left;
 }
 
+.quarter.column{
+	width: 220px;
+	margin-right:32px;
+}
+
 .right.column p, .right.column h1{
 	margin-right: 46px;
 }

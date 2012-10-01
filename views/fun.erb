@@ -1,0 +1,40 @@
+<style type="text/css">
+.post_date{
+	float: right;
+	font-size: 90%;
+}
+</style>
+<br>
+<div class="column">
+	<div class="note"><div class="content">
+		<h1><%= @activepost["title"] %></h1>
+		<%= @activepost["content"] %>
+		<hr>
+		<%= @otherlang["content"] %>
+	</div>
+</div>
+
+<div class="row">
+
+
+<% @categories.each do |category| %>
+
+<div class="quarter column">
+	<h3><%= category["title"] %></h3> 
+
+	<ul>
+	<% @posts.each_with_index do |post,index|%>
+	<% if post["categories"][0]["id"]==category["id"] %>
+	<li>
+		<span class="post_date"><%= l Date.parse(post["date"]), :human %></span><a href="/post/<%= post["slug"] %>"><%= post["title"] %></a>
+		
+	</li>
+	<% end %>
+	<% end %>
+	<ul>
+</div>
+
+<% end %>
+<br style="clear: both">
+</div>
+</div>

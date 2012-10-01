@@ -2,6 +2,8 @@ require 'sinatra'
 require 'rubygems' 
 require 'mail'
 require 'sinatra/r18n'
+require 'open-uri'
+require 'json'
 
 enable :sessions
 
@@ -61,6 +63,38 @@ get '/contact' do
 	erb :"/#{session[:locale]}/contact"
 end
 
+get '/post/?:post_slug?' do
+	server = "http://fun.jamboschool.jp/"
+
+	#read in list of categories
+	stream = open(server+"/?json=get_category_index&lang=#{session[:locale]}")
+	result = JSON.parse(stream.read)
+	@categories = result["categories"]
+	stream.close
+
+	# read in all posts
+	stream = open(server+"\?json=1&count=30&lang=#{session[:locale]}")
+	result = JSON.parse(stream.read)
+	@posts = result["posts"]
+	stream.close
+
+	# if activepost in parameter p, load that. else - first in list (most recent)
+	post_slug = params["post_slug"] || -1
+	@activepost = @posts[0]
+	@posts.each_with_index do |post, i|
+		if post["slug"] == post_slug
+			@activepost = post
+		end
+	end
+
+	# read in active post in the other language
+	stream = open(server+"\?json=1&p=#{@activepost["id"]}&lang=#{t.otherlang}")
+	result = JSON.parse(stream.read)
+	@otherlang = result["post"]
+	stream.close
+
+	erb :fun
+end
 
 post '/contact/?' do
 	@contact_email = params['contact_email']||""
