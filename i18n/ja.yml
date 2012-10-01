@@ -7,6 +7,12 @@ phone: "電話"
 otherlang: en
 otherlangname: "English"
 
+newsletter:
+ heading: "ＪＡＭＢＯニュースレター"
+ subheading: "授業と楽しい催し物に関する最新情報を送って欲しい"
+ name: "名前： "
+ email: "メールアドレス："
+ 
 menu:
  home: ホームページ
  about: "ジャンボ学校とは"
@@ -18,3 +24,10 @@ menu:
 message:
  thankyou: ありがとう
  mail_error: "メールは無効です"
+
+fun:
+  frequency:
+    idiom: "毎月、第１水曜日に掲載"
+    joke: "第２水曜日に掲載"
+    inspiration: "第３水曜日に掲載"
+    proverb: "第４水曜日に掲載"

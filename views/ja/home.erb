@@ -37,18 +37,18 @@
 	</div>
 	<div class="right column">
 		<div class="note"><div class="content" style="height: 160px">
-			<h3>ＪＡＭＢＯニュースレター</h3>
-			<p>授業と楽しい催し物に関する最新情報を送って欲しい</p>
+			<h3><%= t.newsletter.heading %>/h3>
+			<p><%= t.newsletter.subheading %></p>
 			<!-- Begin MailChimp Signup Form -->
 <div id="mc_embed_signup">
 <form action="http://jamboschool.us5.list-manage2.com/subscribe/post?u=e61f237f4c5eb638b28488c23&amp;id=40494aff1f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
 
 <div class="mc-field-group">
-<label for="mce-EMAIL">メールアドレス：</label>
+<label for="mce-EMAIL"><%= t.newsletter.email %></label>
 <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
 </div>
 <div class="mc-field-group">
-<label for="mce-NAME">名前： </label>
+<label for="mce-NAME"><%= t.newsletter.name %></label>
 <input type="text" value="" name="NAME" class="" id="mce-NAME">
 <input type="submit" value="無料で配信" name="subscribe" id="mc-embedded-subscribe" class="button">
 <div id="mce-responses" class="clear">

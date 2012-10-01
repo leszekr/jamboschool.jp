@@ -6,6 +6,11 @@ david: "David Howenstein"
 phone: "Phone: "
 otherlang: ja
 otherlangname: "日本語"
+newsletter:
+ heading: "JAMBO Newsletter"
+ subheading: "Please sign up here if you want to receive free updates."
+ name: "Name: "
+ email: "Email address: "
 
 menu:
  home: Home
@@ -18,3 +23,10 @@ menu:
 message:
  thankyou: Thank you
  mail_error: E-mail is not valid
+
+fun:
+  frequency:
+    idiom: "Published every 1st Wednesday of the month"
+    joke: "Published every 2nd Wednesday of the month"
+    inspiration: "Published every 3rd Wednesday of the month"
+    proverb: "Published every 4th Wednesday of the month"

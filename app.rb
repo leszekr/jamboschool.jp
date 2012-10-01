@@ -49,7 +49,7 @@ get '/about' do
 	erb :"/#{session[:locale]}/about"
 end
 
-get '/fun' do
+get '/oldfun' do
 	@m[:fun] = "active"
 	@subtitle = t.menu.fun
 	markdown :"/#{session[:locale]}/fun"
@@ -63,7 +63,7 @@ get '/contact' do
 	erb :"/#{session[:locale]}/contact"
 end
 
-get '/post/?:post_slug?' do
+get '/fun/?:post_slug?' do
 	server = "http://fun.jamboschool.jp/"
 
 	#read in list of categories
@@ -93,6 +93,8 @@ get '/post/?:post_slug?' do
 	@otherlang = result["post"]
 	stream.close
 
+	@m[:fun] = "active"
+	@subtitle = t.menu.fun+" - "+@activepost["categories"][0]["title"]+" - "+@activepost["title"]
 	erb :fun
 end
 
