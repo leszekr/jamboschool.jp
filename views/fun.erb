@@ -3,6 +3,9 @@
 	float: right;
 	font-size: 90%;
 }
+.note_footer{
+	color: #aaa;
+}
 </style>
 <div class="left column"><br>
 	<div class="note"><div class="content">
@@ -11,7 +14,7 @@
 		<hr>
 		<%= @activepost["content"] %>
 		<br>
-		<span class="post_date"><%= l Date.parse(@activepost["date"]), :human %></span>
+		<div class="note_footer"><%= @activepost["categories"][0]["title"] %><span class="post_date"><%= l Date.parse(@activepost["date"]), :human %></span></div>
 		</div>
 	</div>
 	<br>
