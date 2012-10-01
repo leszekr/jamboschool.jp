@@ -3,10 +3,12 @@
 	code: Leszek Rybicki
 	design: Jakub Kuik;
 	date: 22.08.2012;
+@import url("/style/titilliumtext/stylesheet.css");
 */
 
-@import url("/style/titilliumtext/stylesheet.css");
-
+html{
+	width: 100%;
+}
 
 body{
 	margin: 0;
@@ -15,6 +17,8 @@ body{
 	font-family: helvetica, arial, sans;
 	font-size: 14px;
 	color: #00787f;
+	width: 100%;
+	position: relative;
 	padding-bottom: 40px;
 	text-shadow:1px 1px 1px #E0FDFF;
 	-webkit-text-shadow:1px 1px 1px #E0FDFF;
@@ -36,9 +40,9 @@ p{
 	font-size: 12px;
 	right: 0;
 
-	text-shadow:1px 1px 1px #7be9f0;
-	-webkit-text-shadow:1px 1px 1px #7be9f0;
-	-moz-text-shadow:1px 1px 1px #7be9f0;
+	text-shadow:-1px -1px 1px rgba(0,0,0,0.5);
+	-webkit-text-shadow:-1px -1px 1px rgba(0,0,0,0.5);
+	-moz-text-shadow:-1px -1px 1px rgba(0,0,0,0.5);
 	text-decoration: none;
 	line-height: 30px;
 	color: white;
@@ -80,7 +84,7 @@ a{
 	overflow: hidden;
 	position: absolute;
 	left: 0px;
-	background: url(../img/jambo-school-logo.png) bottom left no-repeat;
+	background: url(../img/jambo-school-logo.png) bottom left;
 }
 
 .column ul li{
@@ -99,7 +103,7 @@ a{
 	margin: 0;
 	padding: 0;
 	-webkit-margin-before: 0;
-	font-family: "Hiragino Sans GB", 'TitilliumText22L';
+/*	font-family: "Hiragino Sans GB", 'TitilliumText22L';*/
 	font-weight: bold;
 }
 
