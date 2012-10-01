@@ -9,7 +9,7 @@
 </style>
 <div class="left column"><br>
 	<div class="note"><div class="content">
-		<h1><%= @activepost["title"] %></h1>
+		<h2><%= @activepost["title"] %></h2>
 		<%= @otherlang["content"] %>
 		<hr>
 		<%= @activepost["content"] %>
@@ -41,11 +41,11 @@
 <% end %>
 <% if session[:locale]=="ja" %>
 
-<p>また、ジャンボインターナショナルのページもお気軽にのぞいてみてください。そこにはジャンボエッセイ（毎月、第２火曜日ごろに更新）や、ジャンボ心の声（毎月、第１、第３火曜日ごろに更新）などが掲載されています。</p>
+<p>また、ジャンボインターナショナルのページもお気軽にのぞいてみてください。そこには<a href="http://jambointernational.org/category/writing/" target="_blank">ジャンボエッセイ</a>（毎月、第２火曜日ごろに更新）や、<a href="http://jambointernational.org/category/pondering/" target="_blank">ジャンボ心の声</a>（毎月、第１、第３火曜日ごろに更新）などが掲載されています。</p>
 
 <% else %>
 
-<p>Also, please feel free to check out JAMBO International’s JAMBO’s Writing (JAMBOエッセイ） - generally put in every second Tuesday of the month - and JAMBO Ponderings (心の声）- generally put in on the 1st and 3rd Tuesday of every month.</p>
+<p>Also, please feel free to check out JAMBO International’s <a href="en.http://jambointernational.org/category/writing/" target="_blank">JAMBO’s Writing (JAMBOエッセイ）</a> - generally put in every second Tuesday of the month - and <a href="http://en.jambointernational.org/category/pondering/" target="_blank">JAMBO Ponderings (心の声）</a>- generally put in on the 1st and 3rd Tuesday of every month.</p>
 
 <% end %>
 <br>
