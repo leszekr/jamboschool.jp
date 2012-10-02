@@ -1,1 +1,53 @@
-<div style="padding: 200px">Not found.</div>
+<style>
+body{
+	background: url(/img/stars.jpg) top center;
+}
+#header{
+	background: url(../img/header-dark.png) top center repeat-x;
+}
+
+#nav ul li a{
+	text-shadow:1px 1px 1px #001D1F;
+	-webkit-text-shadow:1px 1px 1px #001D1F;
+	-moz-text-shadow:1px 1px 1px #001D1F;
+	color: #8cf7ff;
+}
+
+#nav ul li a:hover{
+	color: #fff;
+	border-bottom: 3px solid white;
+	-webkit-text-shadow:1px 1px 1px #000;
+	-moz-text-shadow:1px 1px 1px #000;
+}
+.error404{
+	color: #8cf7ff;
+	text-shadow: none;
+	-webkit-text-shadow: none;
+	-moz-text-shadow: none;
+	position: relative;
+	padding-left: 60px;
+}
+#astronaut{
+	position: absolute;
+	left: 450px;
+	top: 0px;
+}
+</style>
+<div class="error404">
+	<h1>Page not found</h1>
+	<p>The page you are looking for is lost in space.</p>
+	<p>No worries. Just use the menu to find the page you need.</p>
+	<img src="/img/astronaut.png" id="astronaut" alt="Image of astronaut">
+</div>
+<script>
+window.onload = init;
+
+function init(){
+	var astronaut = document.getElementById("astronaut");
+	function wave(){
+		var time = new Date().getTime();
+		astronaut.style.top = 10*Math.sin(time/1000)+"px";
+	}
+	setInterval(wave, 100);
+}
+</script>
