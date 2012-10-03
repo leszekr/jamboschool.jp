@@ -286,7 +286,7 @@ textarea{
 	padding-top: 5px;
 }
 
-input[type=submit]{
+input[type=submit], .flip-button{
 	width: 100px;
 	float: right;
 	border: none;
@@ -335,4 +335,98 @@ input[type=submit]{
 #footer .content{
 	background: url(../img/footer-noise.png) top center;
 	height: 100%;
+}
+.post_date{
+	float: right;
+	font-size: 90%;
+}
+.note_footer{
+	color: #aaa;
+}
+
+a.flip-button{
+	display: block;
+	float: right;
+	width: 120px;
+	text-align: center;
+	border: 1px solid #00787F;
+	padding: 2px;
+	text-decoration: none;
+	text-shadow: none;
+	-webkit-text-shadow: none;
+	-moz-text-shadow: none;
+	margin-right: 0;
+}
+
+.flipcard{
+	position: relative;
+	-webkit-perspective: 1200px;
+	-moz-perspective: 1200px;
+	width: 460px;
+	height: auto;
+}
+
+.flipcard .front{
+	float: none;
+	float: left;
+	top: 0;
+	left: 0;
+	z-index: 900;
+	width: inherit;
+	height: inherit;
+
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+
+	-moz-transform: rotateX(0deg) rotateY(0deg);
+	-moz-transform-style: preserve-3d;
+	-moz-backface-visibility: hidden;
+
+	/* -- transition is the magic sauce for animation -- */
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
+.flipcard.flip .front {
+	z-index: 900;
+
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+}
+
+.flipcard .back {
+	float: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 800;
+	width: inherit;
+	height: inherit;
+	
+	-webkit-transform: rotateY(-180deg);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+
+	-moz-transform: rotateY(-180deg);
+	-moz-transform-style: preserve-3d;
+	-moz-backface-visibility: hidden;
+
+	/* -- transition is the magic sauce for animation -- */
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
+.flipcard.flip .back {
+	z-index: 1000;
+
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	-moz-transform: rotateX(0deg) rotateY(0deg);
+
 }

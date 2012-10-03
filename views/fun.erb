@@ -1,24 +1,31 @@
 <style type="text/css">
-.post_date{
-	float: right;
-	font-size: 90%;
-}
-.note_footer{
-	color: #aaa;
-}
+
+
 </style>
 <div class="left column"><br>
-	<div class="note"><div class="content">
-		<h2><%= @activepost["title"] %></h2>
-		<%= @otherlang["content"] %>
-		<hr>
-		<%= @activepost["content"] %>
-		<br>
-		<div class="note_footer"><%= @activepost["categories"][0]["title"] %><span class="post_date"><%= l Date.parse(@activepost["date"]), :human %></span></div>
+	<div class="flipcard">
+		<div class="front">
+			<div class="note">
+				<div class="content">
+					<h2><%= @activepost["title"] %><span class="post_date"><%= l Date.parse(@activepost["date"]), :human %></span></h2>
+					<%= @otherlang["content"] %>
+					<br>
+					<div class="note_footer"><%= @activepost["categories"][0]["title"] %><a class="flip-button" href="#"><%= t.button.to_original %></a></div>
+
+				</div>
+			</div>
+		</div>
+		<div class="back">
+			<div class="note"><div class="content">
+				<h2><%= @activepost["title"] %><span class="post_date"><%= l Date.parse(@activepost["date"]), :human %></span></h2>
+				<%= @activepost["content"] %>
+				<br>
+				<div class="note_footer"><%= @activepost["categories"][0]["title"] %><a class="flip-button" href="#"><%= t.button.to_translation %></a></div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<br>
-
 </div>
 
 <div class="right column">

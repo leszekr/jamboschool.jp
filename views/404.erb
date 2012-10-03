@@ -34,9 +34,15 @@ body{
 }
 </style>
 <div class="error404">
-	<h1>Page not found</h1>
+<% if session[:locale]=="ja" %>
+	<h1><strong>404</strong>! ページが見つかりません。</h1>
+<p>メニューでご希望のページをクリックして見てください。</p>
+<% else %>
+	<h1><strong>404</strong>! Page not found</h1>
 	<p>The page you are looking for is lost in space.</p>
 	<p>No worries. Just use the menu to find the page you need.</p>
+
+<% end %>
 	<img src="/img/astronaut.png" id="astronaut" alt="Image of astronaut">
 </div>
 <script>
