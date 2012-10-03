@@ -392,8 +392,8 @@ a.flip-button{
 }
 
 .flipcard.flip .front {
-	z-index: 900;
-
+	z-index: 9;
+	position: absolute;
 	-webkit-transform: rotateY(180deg);
 	-moz-transform: rotateY(180deg);
 }
@@ -403,18 +403,15 @@ a.flip-button{
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 800;
+	z-index: 8;
 	width: inherit;
 	height: inherit;
-	
 	-webkit-transform: rotateY(-180deg);
 	-webkit-transform-style: preserve-3d;
 	-webkit-backface-visibility: hidden;
-
 	-moz-transform: rotateY(-180deg);
 	-moz-transform-style: preserve-3d;
 	-moz-backface-visibility: hidden;
-
 	/* -- transition is the magic sauce for animation -- */
 	-o-transition: all .4s ease-in-out;
 	-ms-transition: all .4s ease-in-out;
@@ -424,9 +421,7 @@ a.flip-button{
 }
 
 .flipcard.flip .back {
-	z-index: 1000;
-
+	z-index: 10;
 	-webkit-transform: rotateX(0deg) rotateY(0deg);
 	-moz-transform: rotateX(0deg) rotateY(0deg);
-
 }
