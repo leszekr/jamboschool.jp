@@ -9,6 +9,8 @@ enable :sessions
 
 set :markdown, :layout_engine => :erb, :layout => :layout
 
+server = "http://fun.jamboschool.jp/"
+
 
 R18n.set("ja")
 R18n::I18n.default = "ja"
@@ -34,7 +36,20 @@ end
 get '/' do
 	@m[:home] = "active"
 	@body_class="home-page"
-	erb :"/#{session[:locale]}/home"
+
+	# read in newest post
+	stream = open(server+"\?json=1&count=1&lang=#{session[:locale]}")
+	result = JSON.parse(stream.read)
+	@activepost = result["posts"][0]
+	stream.close
+
+	# read in active post in the other language
+	stream = open(server+"\?json=1&p=#{@activepost["id"]}&lang=#{t.otherlang}")
+	result = JSON.parse(stream.read)
+	@otherlang = result["post"]
+	stream.close
+
+	erb :home
 end
 
 get '/classes' do
@@ -64,7 +79,6 @@ get '/contact' do
 end
 
 get '/fun/?:post_slug?' do
-	server = "http://fun.jamboschool.jp/"
 
 	#read in list of categories
 	stream = open(server+"/?json=get_category_index&lang=#{session[:locale]}")

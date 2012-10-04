@@ -6,7 +6,8 @@ david: "デイヴィッド・ハウェンスタイン"
 phone: "電話"
 otherlang: en
 otherlangname: "English"
-
+motto: 室内外で英語を<br>とことん学ぶ
+fun_block: 今週のお楽しみ
 newsletter:
  heading: "ＪＡＭＢＯニュースレター"
  subheading: "授業と楽しい催し物に関する最新情報を送って欲しい"
@@ -25,6 +26,11 @@ message:
  thankyou: ありがとう
  mail_error: "メールは無効です"
 
+
+button:
+  to_original: 日本語の翻訳
+  to_translation: 英語の翻訳
+  
 fun:
   frequency:
     idiom: "毎月、第１水曜日に掲載"

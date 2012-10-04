@@ -6,6 +6,8 @@ david: "David Howenstein"
 phone: "Phone: "
 otherlang: ja
 otherlangname: "日本語"
+motto: Learning English<br>INSIDE &amp; OUT
+fun_block: Fun with English this week
 newsletter:
  heading: "JAMBO Newsletter"
  subheading: "Please sign up here if you want to receive free updates."
@@ -23,6 +25,10 @@ menu:
 message:
  thankyou: Thank you
  mail_error: E-mail is not valid
+
+button:
+  to_original: See original
+  to_translation: See translation
 
 fun:
   frequency:

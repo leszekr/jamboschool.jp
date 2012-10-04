@@ -1,10 +1,10 @@
 <div class="row">
 	<div class="left column">
-		<h1>Learning English<br>INSIDE &AMP; OUT</h1>
+		<h1><%= t.motto %></h1>
 		<img src="img/sky_island.png" alt="">
 	</div>
 	<div class="right column">
-<% if session[:locale]=="ja" %>
+<% if session[:locale]=="en" %>
 
 		<div class="diagram en">Learning, Connecting with others, Having fun</div>
 		<p>We are truly ONE OF A KIND, offering you the opportunity to study in a traditional classroom setting, using your English outside of the classroom (if you so desire) through our many activities, and giving you the chance to control the manner and avenues in which you study.  </p>
@@ -20,7 +20,7 @@
 	</div>
 	<br class="clear">
 	<div class="left column align-right">
-<% if session[:locale]=="ja" %>
+<% if session[:locale]=="en" %>
 
 		<p>JAMBO English School</p>
 		<p>Learning English Inside & Out<br>
@@ -54,19 +54,21 @@
 			<div class="front">
 				<div class="note">
 					<div class="content">
-						<h2><%= @activepost["title"] %><span class="post_date"><%= l Date.parse(@activepost["date"]), :human %></span></h2>
+						<h2><%= t.fun_block %><span class="post_date"><%= l Date.parse(@activepost["date"]), :human %></span></h2>
+						<h2><%= @activepost["title"] %></h2>
 						<%= @otherlang["content"] %>
 						<br>
-						<div class="note_footer"><%= @activepost["categories"][0]["title"] %><a class="flip-button" href="#"><%= t.button.to_original %></a></div>
+						<div class="note_footer"><a class="flip-button" href="#"><%= t.button.to_original %></a><a href="/fun"><%= @activepost["categories"][0]["title"] %></a></div>
 						</div>
 				</div>
 			</div>
 			<div class="back">
 				<div class="note"><div class="content">
-					<h2><%= @activepost["title"] %><span class="post_date"><%= l Date.parse(@activepost["date"]), :human %></span></h2>
+					<h2><%= t.fun_block %><span class="post_date"><%= l Date.parse(@activepost["date"]), :human %></span></h2>
+					<h2><%= @activepost["title"] %></h2>
 					<%= @activepost["content"] %>
 					<br>
-					<div class="note_footer"><%= @activepost["categories"][0]["title"] %><a class="flip-button" href="#"><%= t.button.to_translation %></a></div>
+					<div class="note_footer"><a class="flip-button" href="#"><%= t.button.to_translation %></a><a href="/fun"><%= @activepost["categories"][0]["title"] %></a></div>
 					</div>
 				</div>
 			</div>
