@@ -44,7 +44,7 @@ get '/' do
 	stream.close
 
 	# read in active post in the other language
-	stream = open(server+"\?json=1&p=#{@activepost["id"]}&lang=#{t.otherlang}")
+	stream = open(server+"\?json=get_post&id=#{@activepost["id"]}&lang=#{t.otherlang}")
 	result = JSON.parse(stream.read)
 	@otherlang = result["post"]
 	stream.close
@@ -78,7 +78,7 @@ get '/contact' do
 	erb :"/#{session[:locale]}/contact"
 end
 
-get '/fun/?:post_slug?' do
+get '/fun/?:post_id?' do
 
 	#read in list of categories
 	stream = open(server+"/?json=get_category_index&lang=#{session[:locale]}")
@@ -93,16 +93,16 @@ get '/fun/?:post_slug?' do
 	stream.close
 
 	# if activepost in parameter p, load that. else - first in list (most recent)
-	post_slug = params["post_slug"] || -1
+	post_id = params["post_id"].to_i || -1
 	@activepost = @posts[0]
 	@posts.each_with_index do |post, i|
-		if post["slug"] == post_slug
+		if post["id"] == post_id
 			@activepost = post
 		end
 	end
 
 	# read in active post in the other language
-	stream = open(server+"\?json=1&p=#{@activepost["id"]}&lang=#{t.otherlang}")
+	stream = open(server+"\?json=get_post&id=#{@activepost["id"]}&lang=#{t.otherlang}")
 	result = JSON.parse(stream.read)
 	@otherlang = result["post"]
 	stream.close
