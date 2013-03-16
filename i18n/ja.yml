@@ -18,8 +18,9 @@ menu:
  home: ホームページ
  about: "ジャンボ学校とは"
  fun: "お楽しみ"
- classes: "クラススケジュールと授業料"
+ classes: "クラススケジュール"
  contact: "連絡先"
+ teachers: "先生"
  contact_error: 連絡先 - エラー
 
 message:

@@ -18,8 +18,9 @@ menu:
  home: Home
  about: About the School
  fun: Fun
- classes: Classes and Payments
+ classes: Classes
  contact: Contact
+ teachers: "Teachers"
  contact_error: Contact - error
 
 message:

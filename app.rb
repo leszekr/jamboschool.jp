@@ -58,6 +58,12 @@ get '/classes' do
 	erb :"/#{session[:locale]}/classes"
 end
 
+get '/teachers' do
+	@m[:teachers] = "active"
+	@subtitle = t.menu.teachers
+	erb :"/#{session[:locale]}/teachers"
+end
+
 get '/about' do
 	@m[:about] = "active"
 	@subtitle = t.menu.about

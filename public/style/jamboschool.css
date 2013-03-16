@@ -15,8 +15,9 @@ body{
 	padding: 0;
 	background: #6ED7E4 url(../img/background.jpg) top center repeat-x;
 	font-family: helvetica, arial, sans;
-	font-size: 14px;
-	color: #00787f;
+	font-size: 15px;
+	color: #00585f;
+	line-height: 1.5;
 	width: 100%;
 	position: relative;
 	padding-bottom: 40px;
@@ -28,6 +29,7 @@ body{
 p{
 	line-height: 1.5em;
 	color: #003438;
+	text-align: justify;
 }
 
 #language_switcher{
@@ -124,7 +126,7 @@ a{
 	text-shadow:1px 1px 1px #E0FDFF;
 	-webkit-text-shadow:1px 1px 1px #E0FDFF;
 	-moz-text-shadow:1px 1px 1px #E0FDFF;
-	color: #0c979f;
+	color: #0c676f;
 	border-bottom: 2px solid transparent;
 }
 

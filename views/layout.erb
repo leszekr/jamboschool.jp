@@ -37,7 +37,12 @@
 				<ul>
 					<li class="<%= @m[:home] %>"><a href="/"><%= t.menu.home %></a></li>
 					<li class="<%= @m[:about] %>"><a href="/about"><%= t.menu.about %></a></li>
-					<li class="<%= @m[:classes] %>"><a href="/classes"><%= t.menu.classes %></a></li>
+					<li class="<%= @m[:classes] %>"><a href="/classes"><%= t.menu.classes %></a>
+						<ul>
+							<li>Payments</li>
+						</ul>
+					</li>
+					<li class="<%= @m[:teachers] %>"><a href="/teachers"><%= t.menu.teachers %></a></li>
 					<li class="<%= @m[:fun] %>"><a href="/fun"><%= t.menu.fun %></a></li>
 					<li class="<%= @m[:contact] %>"><a href="/contact"><%= t.menu.contact %></a></li>
 				</ul>
