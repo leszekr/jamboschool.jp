@@ -39,7 +39,11 @@
 					<li class="<%= @m[:about] %>"><a href="/about"><%= t.menu.about %></a></li>
 					<li class="<%= @m[:classes] %>"><a href="/classes"><%= t.menu.classes %></a>
 						<ul>
-							<li>Payments</li>
+							<li><a href="/classes"><%= t.menu.allclasses %></a></li>
+							<li><a href="/classes/environmental-issues"><%= t.menu.environmental %></a></li>
+							<li><a href="/classes/jokes-and-humor"><%= t.menu.jokes %></a></li>
+							<li><a href="/classes/feel-good-stories"><%= t.menu.feelgood %></a></li>
+							<li><a href="/classes/football"><%= t.menu.football %></a></li>
 						</ul>
 					</li>
 					<li class="<%= @m[:teachers] %>"><a href="/teachers"><%= t.menu.teachers %></a></li>

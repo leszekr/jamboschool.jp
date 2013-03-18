@@ -22,6 +22,11 @@ menu:
  contact: "連絡先"
  teachers: "先生"
  contact_error: 連絡先 - エラー
+ allclasses: 現在進行中のクラス
+ environmental: 環境問題と活動
+ jokes: ジョークやユーモアを学ぶ
+ feelgood: 心温まる話を学ぶ
+ football: 英語でフットボール
 
 message:
  thankyou: ありがとう
