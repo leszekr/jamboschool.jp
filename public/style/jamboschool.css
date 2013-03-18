@@ -15,6 +15,7 @@ body{
 	margin: 0;
 	padding: 0;
 	background: #6ED7E4 url(../img/background.jpg) top center repeat-x;
+	background-attachment: fixed; 
 	font-family: helvetica, arial, sans;
 	font-size: 15px;
 	color: #00383f;
@@ -389,10 +390,9 @@ input[type=submit], .flip-button{
 }
 
 a.buttonbanner{
-		display: block;
-	float: right;
+	display: block;
+	text-align: center;
 	width: 100%;
-	text-align: left;
 	border: 1px solid #00787f;
 	background: #E0FDFF;;
 	color: #00787f;
@@ -403,6 +403,10 @@ a.buttonbanner{
 	-webkit-text-shadow: none;
 	-moz-text-shadow: none;
 	margin-right: 0;
+}
+
+a.buttonbanner h1{
+	margin-top: 0;
 }
 
 a.buttonbanner:hover{

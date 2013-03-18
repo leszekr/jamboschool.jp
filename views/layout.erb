@@ -36,7 +36,10 @@
 			<div id="nav">
 				<ul>
 					<li class="<%= @m[:home] %>"><a href="/"><%= t.menu.home %></a></li>
-					<li class="<%= @m[:about] %>"><a href="/about"><%= t.menu.about %></a></li>
+					<li class="<%= @m[:about] %>"><a href="/about"><%= t.menu.about %></a><ul>
+						<li class="<%= @m[:benefits] %>"><a href="/benefits"><%= t.menu.benefits %></a></li> 
+						<li class="<%= @m[:teachers] %>"><a href="/teachers"><%= t.menu.teachers %></a></li>
+					</ul></li>
 					<li class="<%= @m[:classes] %>"><a href="/classes"><%= t.menu.classes %></a>
 						<ul>
 							<li><a href="/classes"><%= t.menu.allclasses %></a></li>
@@ -46,7 +49,6 @@
 							<li><a href="/classes/football"><%= t.menu.football %></a></li>
 						</ul>
 					</li>
-					<li class="<%= @m[:teachers] %>"><a href="/teachers"><%= t.menu.teachers %></a></li>
 					<li class="<%= @m[:fun] %>"><a href="/fun"><%= t.menu.fun %></a></li>
 					<li class="<%= @m[:contact] %>"><a href="/contact"><%= t.menu.contact %></a></li>
 				</ul>

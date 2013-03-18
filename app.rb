@@ -38,16 +38,22 @@ get '/' do
 	@body_class="home-page"
 
 	# read in newest post
-	stream = open(server+"\?json=1&count=1&lang=#{session[:locale]}")
-	result = JSON.parse(stream.read)
-	@activepost = result["posts"][0]
-	stream.close
+	begin
+		stream = open(server+"\?json=1&count=1&lang=#{session[:locale]}")
+		result = JSON.parse(stream.read)
+		@activepost = result["posts"][0]
+		stream.close
 
-	# read in active post in the other language
-	stream = open(server+"\?json=get_post&id=#{@activepost["id"]}&lang=#{t.otherlang}")
-	result = JSON.parse(stream.read)
-	@otherlang = result["post"]
-	stream.close
+		# read in active post in the other language
+		stream = open(server+"\?json=get_post&id=#{@activepost["id"]}&lang=#{t.otherlang}")
+		result = JSON.parse(stream.read)
+		@otherlang = result["post"]
+		stream.close
+	rescue
+		@activepost = {:slug=>"", :date=>"", :title=>""}
+		@otherlang = {:slug=>"", :date=>"", :title=>""}
+	end
+
 
 	erb :home
 end
@@ -65,7 +71,7 @@ get '/classes/:class' do
 end
 
 get '/teachers' do
-	@m[:teachers] = "active"
+	@m[:about] = "active"
 	@subtitle = t.menu.teachers
 	erb :"/#{session[:locale]}/teachers"
 end
@@ -74,6 +80,12 @@ get '/about' do
 	@m[:about] = "active"
 	@subtitle = t.menu.about
 	erb :"/#{session[:locale]}/about"
+end
+
+get '/benefits' do
+	@m[:about] = "active"
+	@subtitle = t.menu.benefits
+	erb :"/#{session[:locale]}/benefits"
 end
 
 get '/oldfun' do
