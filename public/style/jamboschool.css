@@ -138,7 +138,7 @@ a{
 	border-bottom: 3px solid transparent;
 }
 
-#nav ul li a:hover{
+#nav ul li a:hover,#nav ul li.hover > a{
 	color: #2cb7bf;
 	border-bottom: 3px solid white;
 	-webkit-text-shadow:1px 1px 1px #fff;
@@ -168,15 +168,16 @@ a{
 #nav ul li ul li a {
 	height: auto;
 	line-height: 1.5;
+	border-left: 3px solid transparent;
 	padding: 3px 1.5em;
 }
 
 #nav ul li ul li a:hover {
-	background: url(../img/menu-highlight.png) top center repeat-x;
 	border-bottom: 3px solid transparent;
-
+	border-left: 3px solid transparent;
 	-webkit-text-shadow: none;
 	-moz-text-shadow: none;
+	background: url(../img/menu-highlight.png) bottom center repeat-x;
 }
 
 .container{
