@@ -6,6 +6,8 @@ require 'open-uri'
 require 'json'
 
 enable :sessions
+  set :session_secret, "Persistence"
+  set :protection, except: :session_hijacking
 
 set :markdown, :layout_engine => :erb, :layout => :layout
 
